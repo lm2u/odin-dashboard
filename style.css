@@ -39,6 +39,17 @@ ul{
   gap:10px;
 }
 
+li{
+  display:grid;
+  grid-template-columns: min-content auto;
+  gap:10px;
+}
+
+img{
+  height:1rem;
+  width:1rem;
+}
+
 header{
   grid-area: header;
   background-color: var(--bg-secondary);
