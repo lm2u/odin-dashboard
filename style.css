@@ -36,18 +36,26 @@ aside{
 
 ul{
   display:grid;
-  gap:10px;
+  gap:16px;
+  margin:1.5em;
 }
 
 li{
   display:grid;
   grid-template-columns: min-content auto;
-  gap:10px;
+  gap:16px;
+  font-size:1.25rem;
+  align-items:center;
+}
+
+.border{
+  border:1px solid black;
+  margin: 16px 0 16px 0;
 }
 
 img{
-  height:1rem;
-  width:1rem;
+  height:20px;
+  width:20px;
 }
 
 header{
