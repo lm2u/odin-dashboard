@@ -88,3 +88,60 @@ header{
   background-color: var(--bg-buttons);
   display:grid;
 }
+
+/* ------------------------------------------ */
+/* Header stuff */
+/* ------------------------------------------ */
+.top-header{
+  display:grid;
+  grid-template-columns: 2fr 1fr;
+}
+
+.top-right-header{
+  display:grid;
+  grid-template-columns: 16px 32px auto;
+  gap:1rem;
+  justify-content:end;
+  margin-right:10em;
+}
+
+.avatar{
+  width: 2rem;
+  height:2rem;
+  background-color: white;
+  border-radius: 50%;
+  vertical-align: middle;
+}
+
+.bottom-header{
+  display:grid;
+  grid-template-columns: 1fr 1fr;
+  align-items:end;
+}
+
+.bottom-left-header{
+  display:grid;
+  grid-template-columns: 64px auto;
+  /* grid-auto-flow: column; */
+}
+
+.big-avatar{
+  height: 50px;
+  width: 50px;
+  border-radius:50px;
+  background-color:white;
+}
+
+.greeting{
+  display:grid;
+  gap: 8px;
+}
+
+button{
+  padding: 8px 32px 8px 32px;
+  margin-left:16px;
+}
+
+.bottom-right-header{
+  margin:auto;
+}
