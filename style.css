@@ -88,8 +88,6 @@ header{
 
 .right-content{
   grid-area: right;
-  background-color: var(--primary);
-  display:grid;
   margin: 2rem;
 }
 
@@ -149,10 +147,15 @@ button{
 .bottom-right-header{
   margin:auto;
 }
-j
 /* ------------------------------------------ */
 /* Body stuff */
 /* ------------------------------------------ */
+
+.proj-task,
+.reminders-container,
+.sch{
+  border-radius:8px;
+}
 
 /* Calendar */
 .calendar{
@@ -183,9 +186,51 @@ j
   background-color: var(--primary);
   display: grid;
   gap:1rem;
+  border-left:8px solid var(--accent);
 }
 
 .proj-icons{
   display:flex;
   justify-content: flex-end;
 }
+
+
+/* ------------------------------------------ */
+/* Right content */
+/* ------------------------------------------ */
+
+.right-content{
+  display:grid;
+  gap:1rem;
+}
+
+.reminders-container{
+  background-color: var(--primary);
+  display:grid;
+  gap:1rem;
+  padding:1em;
+}
+
+.reminder-title,
+.sch-title{
+  font-weight: bold;
+  font-size:0.85rem;
+}
+
+.reminder-content,
+.sch-time{
+  font-size:0.75rem;
+}
+
+.sep{
+  border:1px solid var(--text);
+}
+
+.sch{
+  background-color: var(--primary);
+  padding:1em;
+  display:grid;
+  gap:1rem;
+}
+
+
