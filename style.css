@@ -1,9 +1,10 @@
 :root{
-  --bg-primary:#042f2e;
-  --bg-secondary:#054634;
-  --bg-buttons:#096c50;
-  --bg-sidebar:#19b589;
-  --font-color:white;
+  --text: #EAEBEB;
+  --background: #042f2e;
+  --primary: #084241;
+  --sidebar: #1f5d5b;
+  --accent: #09b7b4;
+
 }
 
 * {
@@ -17,8 +18,8 @@ html{
 }
 
 body{
-  background-color: var(--bg-primary);
-  color:var(--font-color);
+  background-color: var(--background);
+  color:var(--text);
   display:grid;
   grid-template-areas: 
   "aside header header"
@@ -30,9 +31,10 @@ body{
 aside{
   grid-area: aside;
   height:100vh;
-  background-color: var(--bg-sidebar);
+  background-color: var(--sidebar);
   display:grid;
 }
+
 
 ul{
   display:grid;
@@ -60,12 +62,12 @@ img{
 
 header{
   grid-area: header;
-  background-color: var(--bg-secondary);
+  background-color: var(--primary);
 }
 
 .main-content{
   grid-area: middle;
-  background-color: var(--bg-primary);
+  background-color: var(--background);
   display:grid;
   gap:2rem;
   margin: 2rem 2rem 0 2rem;
@@ -74,6 +76,7 @@ header{
 .main-content .first-content{
   display:grid;
   grid-template-columns: 2fr 1fr;
+  grid-template-columns: repeat();
   grid-gap:2rem;
 }
 
@@ -85,8 +88,9 @@ header{
 
 .right-content{
   grid-area: right;
-  background-color: var(--bg-buttons);
+  background-color: var(--primary);
   display:grid;
+  margin: 2rem;
 }
 
 /* ------------------------------------------ */
@@ -144,4 +148,44 @@ button{
 
 .bottom-right-header{
   margin:auto;
+}
+j
+/* ------------------------------------------ */
+/* Body stuff */
+/* ------------------------------------------ */
+
+/* Calendar */
+.calendar{
+  display:grid;
+}
+
+.days{
+  display:grid;
+  grid-template-columns: repeat(7, 1fr);
+}
+
+.dates{
+  display:grid;
+  grid-template-columns: repeat(7, 1fr);
+}
+
+.dates div:first-child{
+  grid-column: 4;
+}
+
+
+.second-content{
+  max-height: 150px;
+}
+
+.proj-task{
+  padding: 1rem;
+  background-color: var(--primary);
+  display: grid;
+  gap:1rem;
+}
+
+.proj-icons{
+  display:flex;
+  justify-content: flex-end;
 }
