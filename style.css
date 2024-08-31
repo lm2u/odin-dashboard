@@ -60,6 +60,24 @@ img{
   width:20px;
 }
 
+.logo > img{
+  height:60px;
+  width: 60px;
+}
+
+.logo-container{
+  display:grid;
+  grid-template-columns: min-content 1fr;
+  align-items: center;
+  justify-content: center;
+  margin: 10px 1rem;
+  gap:1rem
+}
+
+h1{
+  font-size:2.25rem;
+}
+
 header{
   grid-area: header;
   background-color: var(--primary);
@@ -71,6 +89,7 @@ header{
   display:grid;
   gap:2rem;
   margin: 2rem 2rem 0 2rem;
+  grid-template-rows: auto 1fr;
 }
 
 .main-content .first-content{
@@ -82,13 +101,25 @@ header{
 
 .main-content .second-content{
   display:grid;
-  grid-template-columns: 1fr 1fr;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
   grid-gap:2rem;
+}
+
+.statistics img{
+  /* width:clamp(50%, 75%, 550px); */
+  /* height:clamp(25%, 200px, 275px) ; */
+  /* width:550px; */
+  /* height:250px; */
+  width:100%;
+  height:250px;
+  /* height:%; */
+  object-fit: cover;
+  object-position: center;
 }
 
 .right-content{
   grid-area: right;
-  margin: 2rem;
+  margin: 2rem 2rem 2rem 0;
 }
 
 /* ------------------------------------------ */
@@ -149,6 +180,7 @@ input[type=search]{
   display:grid;
   grid-template-columns: 64px auto;
   margin-left:2rem;
+  margin-bottom:2rem;
 }
 
 .big-avatar{
@@ -164,13 +196,13 @@ input[type=search]{
 }
 
 button{
-  padding: 8px 32px 8px 32px;
+  padding: 0.5em 2em;
   margin-left:16px;
   background-color: var(--accent);
   border: none;
   border-radius: 15px;
   color:var(--text);
-  font-size: 1rem;
+  font-size: clamp(10%, 1rem, 2rem);
   cursor: pointer;
 }
 
@@ -195,9 +227,8 @@ button{
   padding: 1em;
   gap:10px;
   background-color: var(--primary);
-  /* padding:1em; */
-  border-left:8px solid var(--accent);
-  max-height: 225px;
+  min-height:250px;
+  margin:0 1rem;
 }
 
 .month{
@@ -238,8 +269,10 @@ button{
 }
 
 .proj-icons{
-  display:flex;
+  display:grid;
+  grid-template-columns: repeat(3, min-content);
   justify-content: flex-end;
+  gap:1rem
 }
 
 
