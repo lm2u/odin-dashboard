@@ -51,7 +51,7 @@ li{
 }
 
 .border{
-  border:1px solid black;
+  border:1px solid var(--text);
   margin: 16px 0 16px 0;
 }
 
@@ -94,17 +94,41 @@ header{
 /* ------------------------------------------ */
 /* Header stuff */
 /* ------------------------------------------ */
+
+.small-name,
+.greet-hi,
+.greet-name,
+button{
+  font-weight:bold;
+}
+
 .top-header{
   display:grid;
-  grid-template-columns: 2fr 1fr;
+  grid-template-columns: repeat(8, 1fr);
+  margin: 1rem 2rem 2rem 2rem;
 }
 
 .top-right-header{
   display:grid;
   grid-template-columns: 16px 32px auto;
+  gap:1.5rem;
+  grid-column: span 2;
+  align-items: center;
+}
+
+.top-left-header{
+  grid-column: 1 / 7;
+  display:grid;
+  align-items:center;
+  grid-template-columns: 16px auto; 
   gap:1rem;
-  justify-content:end;
-  margin-right:10em;
+}
+input[type=search]{
+  background: var(--sidebar);
+  border:none;
+  padding:10px;
+  width: clamp(10px, 75%, 1250px);
+  border-radius:10px;
 }
 
 .avatar{
@@ -124,7 +148,7 @@ header{
 .bottom-left-header{
   display:grid;
   grid-template-columns: 64px auto;
-  /* grid-auto-flow: column; */
+  margin-left:2rem;
 }
 
 .big-avatar{
@@ -142,6 +166,12 @@ header{
 button{
   padding: 8px 32px 8px 32px;
   margin-left:16px;
+  background-color: var(--accent);
+  border: none;
+  border-radius: 15px;
+  color:var(--text);
+  font-size: 1rem;
+  cursor: pointer;
 }
 
 .bottom-right-header{
