@@ -35,7 +35,7 @@
 }
 
 html{
-  font-family: 'Roboto-mono';
+  font-family: 'Roboto-mono', sans-serif;
 }
 
 body{
@@ -225,7 +225,7 @@ button{
   color:var(--text);
   font-size: clamp(10%, 1rem, 2rem);
   cursor: pointer;
-  font-family: 'Roboto-mono';
+  font-family: 'Roboto-mono', sans-serif;
 }
 
 .bottom-right-header{
